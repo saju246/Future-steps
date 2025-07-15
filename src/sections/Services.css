@@ -101,7 +101,7 @@
   transition: transform 0.3s ease;
 }
 
-.arrow-icon-container:hover .arrow-icon {
+.service-box:hover .arrow-icon {
   transform: rotate(45deg);
 }
 

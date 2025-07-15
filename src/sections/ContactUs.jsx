@@ -10,7 +10,6 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 
-
 function ContactUs() {
   const [formData, setFormData] = useState({
     parentName: "",
@@ -142,7 +141,9 @@ function ContactUs() {
                   value={formData.parentName}
                   onChange={handleChange}
                 />
-                {errors.parentName && <span className="error">{errors.parentName}</span>}
+                {errors.parentName && (
+                  <span className="error">{errors.parentName}</span>
+                )}
               </div>
             </div>
 
@@ -155,7 +156,9 @@ function ContactUs() {
                   value={formData.contactNumber}
                   onChange={handleChange}
                 />
-                {errors.contactNumber && <span className="error">{errors.contactNumber}</span>}
+                {errors.contactNumber && (
+                  <span className="error">{errors.contactNumber}</span>
+                )}
               </div>
             </div>
 
@@ -175,27 +178,37 @@ function ContactUs() {
             <div className="form-row">
               <div className="form-group">
                 <label>Child's Name:</label>
-                <div className="input-wrapper">
+                <div className="input-wrapper-name">
                   <input
                     type="text"
                     name="childName"
                     value={formData.childName}
                     onChange={handleChange}
                   />
-                  {errors.childName && <span className="error">{errors.childName}</span>}
+                  {errors.childName && (
+                    <span className="error">{errors.childName}</span>
+                  )}
                 </div>
               </div>
 
               <div className="form-group">
                 <label>Child's Age:</label>
                 <div className="input-wrapper">
-                  <input
-                    type="number"
+                  <select
                     name="childAge"
                     value={formData.childAge}
                     onChange={handleChange}
-                  />
-                  {errors.childAge && <span className="error">{errors.childAge}</span>}
+                  >
+                    <option value=""></option>
+                    {Array.from({ length: 12 }, (_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.childAge && (
+                    <span className="error">{errors.childAge}</span>
+                  )}
                 </div>
               </div>
             </div>
@@ -216,7 +229,9 @@ function ContactUs() {
                   </label>
                 ))}
               </div>
-              {errors.program && <span className="error">{errors.program}</span>}
+              {errors.program && (
+                <span className="error">{errors.program}</span>
+              )}
             </div>
 
             <div className="form-group">

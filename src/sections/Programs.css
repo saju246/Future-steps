@@ -121,7 +121,7 @@
   margin: auto;
 }
 
-.program-btn:hover .arrow-icon {
+.program-box:hover .arrow-icon {
   transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
