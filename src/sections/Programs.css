@@ -1,0 +1,279 @@
+/* 🔹 Base Desktop Styles (Already Present) */
+.program-page {
+  padding: 120px 150px;
+  background-color: #eaeaea;
+  text-align: center;
+}
+
+.program-title {
+  padding-left: 25px;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #1a2e40;
+  font-family: "Fredoka", sans-serif;
+  margin-bottom: 46px;
+}
+
+
+.highlight-letter-programs {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight-letter-programs::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 89px;
+  height: 89px;
+  background-color: #ADE2FF;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.program-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  justify-items: stretch;
+}
+
+.program-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.program-box:hover {
+  transform: translateY(-6px);
+}
+
+.program-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #1a2e40;
+  font-weight: 500;
+}
+
+.program-box p {
+  font-size: 1.1rem;
+  color: #1a2e40;
+  line-height: 1.5;
+}
+
+.program-bullets {
+  padding-left: 20px;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.program-bullets li {
+  margin-bottom: 5px;
+  list-style-type: disc;
+}
+
+.program-btn {
+  font-size: 1.1rem;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.program-btn img {
+  width: 13px;
+  height: auto;
+}
+
+.gap {
+  height: 20px;
+}
+
+.wide-box {
+  grid-column: 1 / -1;
+  max-width: 700px;
+  margin: auto;
+}
+
+.program-btn:hover .arrow-icon {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .program-page {
+    padding: 80px 20px;
+  }
+
+  .program-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .highlight-letter-programs::before {
+    width: 65px;
+    height: 65px;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .wide-box {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .program-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .program-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .program-box p {
+    font-size: 1rem;
+  }
+
+  .program-bullets {
+    font-size: 0.95rem;
+    padding-left: 16px;
+  }
+
+  .program-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .program-page {
+    padding: 80px 40px;
+  }
+
+  .program-title {
+    font-size: 2.4rem;
+    text-align: left;
+  }
+
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-box {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .program-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .program-box p,
+  .program-bullets {
+    font-size: 1.05rem;
+  }
+
+  .program-btn {
+    justify-content: flex-start;
+  }
+}
+
+
+@media (max-width: 1499px) and (min-width: 1024px) {
+  .program-page {
+    padding: 100px 80px;
+  }
+
+  .program-title {
+    font-size: 2.6rem;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .program-box {
+    padding: 28px;
+  }
+
+  .program-box h3 {
+    font-size: 1.55rem;
+  }
+
+  .program-box p {
+    font-size: 1.1rem;
+  }
+
+  .program-bullets {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1500px) {
+  .program-page {
+    padding: 120px 220px;
+  }
+
+  .program-title {
+    font-size: 3rem;
+  }
+
+
+  .program-box {
+    padding: 32px;
+  }
+
+  .program-box h3 {
+    font-size: 1.8rem;
+  }
+
+  .program-box p {
+    font-size: 1.2rem;
+  }
+
+  .program-bullets {
+    font-size: 1.05rem;
+  }
+
+  .program-btn {
+    font-size: 1.15rem;
+  }
+}
